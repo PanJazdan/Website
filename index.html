@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase Auth - Demo</title>
+</head>
 
 <body>
 
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <h1>System Logowania</h1>
 
+    <div id="auth-form">
+        <div id="signMess" class="messageDiv" style="display: none;">
+
+        </div>
+        <h3>Zaloguj się lub utwórz konto</h3>
+        <input type="email" id="email" placeholder="Email" required><br><br>
+        <input type="password" id="password" placeholder="Hasło" required><br><br>
+
+        <button id="btnLogin">Zaloguj</button>
+        <button id="btnSignup">Zarejestruj</button>
+    </div>
+
+    <div id="user-logged-in" style="display: none;">
+        <h3>Witaj!</h3>
+        <p>Jesteś zalogowany jako: <strong id="current-user-email"></strong></p>
+        <button id="btnLogout">Wyloguj się</button>
+    </div>
+
+    <p id="message" style="color: red;"></p>
+
+    <script type="module" src="auth.js"></script>
 </body>
 
 </html>
